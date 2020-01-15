@@ -1,0 +1,31 @@
+{
+    "dir": "ltr",
+    "lang": "en",
+    "name": "Samuel Michael Kotlin Android Developer",
+    "scope": "/",
+    "display": "browser",
+    "start_url": "https://sammomichael.github.io/",
+    "short_name": "Samuel Michael ",
+    "theme_color": "transparent",
+    "description": "",
+    "orientation": "any",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/images/assets/images/favicon.ico",
+            "sizes": "16x16 32x32 48x48"
+        },
+        {
+            "src": "/images/assets/images/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/assets/images/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        }
+    ]
+}

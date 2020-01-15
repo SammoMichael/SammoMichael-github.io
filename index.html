@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Samuel Michael-Kotlin Android Developer</title>
     <link media="screen">
+    <link rel="manifest" href="manifest.json"/>
+    <script src="/ManUp.js-master/manup.js"></script>
+
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
@@ -22,7 +25,8 @@
             <div class="parallax"><img src="assets/images/space1.jpg" alt="Unsplashed background img 1"></div>
             <div class="row center">
                 <a href="https://drive.google.com/file/d/1CD4U-KJRwykx6jsa4ucVUkQ-m_tSE2ak/view?usp=sharing"
-                   id="download-button" style="border-radius: 50%" class="btn-large waves-effect waves-light teal lighten-1">Resume
+                   id="download-button" style="border-radius: 50%"
+                   class="btn-large waves-effect waves-light teal lighten-1">Resume
                 </a>
             </div>
         </div>
@@ -36,9 +40,9 @@
             <div class="icon-block">
                 <div class="icon-block">
                     <div class="center">
-                    <h1 class="header center green-text text-accent-4">Projects</h1>
-                    <h3 class="light"><strong>IMDBX</strong> - android app in
-                        Retrofit, Room, Coroutines</h3>
+                        <h1 class="header center green-text text-accent-4">Projects</h1>
+                        <h3 class="light"><strong>IMDBX</strong> - android app in
+                            Retrofit, Room, Coroutines</h3>
                     </div>
                     <div class="center" style="margin: 0">
                         <iframe
@@ -62,13 +66,14 @@
                     </a>
                 </h5>
                 <div class="center">
-                <h3 class="light center">Ruby gem with 3000+ downloads metaprogrammmatically enables
-                    idiomatic Ruby List Comprehensions
-                </h3>
+                    <h3 class="light center">Ruby gem with 3000+ downloads metaprogrammmatically enables
+                        idiomatic Ruby List Comprehensions
+                    </h3>
                 </div>
                 <h2 class="center brown-text">
                     <a href="https://rubygems.org/gems/ruby_list_comprehension">
-                        <img style="margin: 0" class="center" src="assets/images/rlcGem.png" alt="Ruby List Comprehension" height="600" width="90%">
+                        <img style="margin: 0" class="center" src="assets/images/rlcGem.png"
+                             alt="Ruby List Comprehension" height="600" width="90%">
                     </a>
                 </h2>
             </div>
@@ -195,6 +200,23 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
+<script type="application/javascript">
 
+    // Check compatibility for the browser we're running this in
+    if ("serviceWorker" in navigator) {
+        if (navigator.serviceWorker.controller) {
+            console.log("[PWA Builder] active service worker found, no need to register");
+        } else {
+            // Register the service worker
+            navigator.serviceWorker
+                .register("pwabuilder-sw.js", {
+                    scope: "./"
+                })
+                .then(function (reg) {
+                    console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+                });
+        }
+    }
+</script>
 </body>
 </html>
