@@ -200,7 +200,11 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
-<script type="application/javascript">
+
+<script>
+    // This is the service worker with the Cache-first network
+
+    // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
 
     // Check compatibility for the browser we're running this in
     if ("serviceWorker" in navigator) {
@@ -217,6 +221,7 @@
                 });
         }
     }
+
 </script>
 </body>
 </html>
